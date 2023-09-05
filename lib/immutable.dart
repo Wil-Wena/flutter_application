@@ -20,18 +20,21 @@ class ImmutableWidget extends StatelessWidget {
               ])),
       child: Center(
         child: Transform.rotate(
-          angle: 180,
+          angle: 180 / Math.pi,
           child: Container(
             width: 250,
             height: 250,
-            decoration: BoxDecoration(color: Colors.purple, boxShadow: [
-              BoxShadow(
-                color: Colors.deepOrange.withAlpha(120),
-                spreadRadius: 4,
-                blurRadius: 15,
-                offset: Offset.fromDirection(1.0, 30),
-              )
-            ]),
+            decoration: BoxDecoration(
+                color: Colors.purple,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.deepOrange.withAlpha(120),
+                    spreadRadius: 4,
+                    blurRadius: 15,
+                    offset: Offset.fromDirection(1.0, 30),
+                  )
+                ],
+                borderRadius: BorderRadius.all(Radius.circular(20))),
             child: Padding(
                 padding: EdgeInsets.all(50.0), child: _buildShinyCircle()),
           ),
