@@ -7,8 +7,8 @@ class ImmutableWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.green),
-      foregroundDecoration: BoxDecoration(
+      decoration: const BoxDecoration(color: Colors.green),
+      foregroundDecoration: const BoxDecoration(
           backgroundBlendMode: BlendMode.colorBurn,
           gradient: LinearGradient(
               begin: Alignment.topCenter,
@@ -34,9 +34,10 @@ class ImmutableWidget extends StatelessWidget {
                     offset: Offset.fromDirection(1.0, 30),
                   )
                 ],
-                borderRadius: BorderRadius.all(Radius.circular(20))),
+                borderRadius: const BorderRadius.all(Radius.circular(20))),
             child: Padding(
-                padding: EdgeInsets.all(50.0), child: _buildShinyCircle()),
+                padding: const EdgeInsets.all(50.0),
+                child: _buildShinyCircle()),
           ),
         ),
       ),
@@ -46,7 +47,7 @@ class ImmutableWidget extends StatelessWidget {
 
 Widget _buildShinyCircle() {
   return Container(
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
       shape: BoxShape.circle,
       gradient: RadialGradient(
           colors: [Colors.lightGreenAccent, Colors.blueAccent],
